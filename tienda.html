@@ -4,7 +4,74 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tienda - Samy Estampados</title>
+
   <link rel="stylesheet" href="style.css" />
+  <!-- Lightbox CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
+  <style>
+    /* Ajustes para la galería dentro de tienda */
+    .galeria h2, .galeria h3 {
+      margin-top: 1.5em;
+    }
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .producto {
+      width: 200px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      box-sizing: border-box;
+      background: #fff7f9;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+    .producto .imagenes {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .producto .imagenes a img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+    .producto .imagenes a img:hover {
+      border-color: #ff77aa;
+    }
+    .producto h3 {
+      margin: 0.3em 0 0.5em;
+      font-size: 1.1em;
+      color: #4a2a44;
+    }
+    .producto p {
+      margin: 0.2em 0 1em;
+      font-weight: bold;
+      color: #7d3f5c;
+    }
+    .producto .btn {
+      background-color: #ff77aa;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .producto .btn:hover {
+      background-color: #cc5c85;
+    }
+  </style>
 </head>
 <body>
 
@@ -28,87 +95,147 @@
     <!-- TAZAS -->
     <h3>Tazones personalizados</h3>
     <div class="productos">
+
+      <!-- Taza estándar personalizada -->
       <div class="producto">
-        <img src="img/taza1.jpg" alt="Taza estándar personalizada" />
+        <div class="imagenes">
+          <a href="img/taza1.jpg" data-lightbox="taza_estandar" data-title="Taza estándar personalizada 1"><img src="img/taza1.jpg" alt="Taza estándar 1" /></a>
+          <a href="img/taza2.jpg" data-lightbox="taza_estandar" data-title="Taza estándar personalizada 2"><img src="img/taza2.jpg" alt="Taza estándar 2" /></a>
+          <a href="img/taza3.jpg" data-lightbox="taza_estandar" data-title="Taza estándar personalizada 3"><img src="img/taza3.jpg" alt="Taza estándar 3" /></a>
+          <a href="img/taza4.jpg" data-lightbox="taza_estandar" data-title="Taza estándar personalizada 4"><img src="img/taza4.jpg" alt="Taza estándar 4" /></a>
+        </div>
         <h3>Taza estándar personalizada</h3>
         <p>$6.000 CLP</p>
         <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20una%20taza%20estándar%20personalizada" target="_blank">Comprar</a>
       </div>
+
+      <!-- Taza mágica -->
       <div class="producto">
-        <img src="img/taza-magica.jpg" alt="Taza mágica" />
+        <div class="imagenes">
+          <a href="img/tazon_magico.jpg" data-lightbox="taza_magica" data-title="Taza mágica"><img src="img/tazon_magico.jpg" alt="Taza mágica" /></a>
+        </div>
         <h3>Taza mágica</h3>
         <p>$7.500 CLP</p>
         <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20una%20taza%20mágica" target="_blank">Comprar</a>
       </div>
+
+      <!-- Taza interior color -->
       <div class="producto">
-        <img src="img/taza-color.jpg" alt="Taza interior color" />
+        <div class="imagenes">
+          <a href="img/taza-color.jpg" data-lightbox="taza_interior_color" data-title="Taza interior color 1"><img src="img/taza-color.jpg" alt="Taza interior color" /></a>
+        </div>
         <h3>Taza interior color</h3>
         <p>$6.500 CLP</p>
         <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20una%20taza%20interior%20color" target="_blank">Comprar</a>
       </div>
+
     </div>
 
     <!-- ACCESORIOS -->
     <h3>Accesorios</h3>
     <div class="productos">
+
+      <!-- Llaveros MDF -->
       <div class="producto">
-        <img src="img/llavero.jpg" alt="Llavero acrílico" />
-        <h3>Llavero acrílico</h3>
+        <div class="imagenes">
+          <a href="img/llaveroMDF1.jpg" data-lightbox="llaveroMDF" data-title="Llavero MDF 1"><img src="img/llaveroMDF1.jpg" alt="Llavero MDF 1" /></a>
+          <a href="img/llaveroMDF2.jpg" data-lightbox="llaveroMDF" data-title="Llavero MDF 2"><img src="img/llaveroMDF2.jpg" alt="Llavero MDF 2" /></a>
+          <a href="img/llaveroMDF3.jpg" data-lightbox="llaveroMDF" data-title="Llavero MDF 3"><img src="img/llaveroMDF3.jpg" alt="Llavero MDF 3" /></a>
+        </div>
+        <h3>Llaveros MDF</h3>
         <p>$2.500 CLP</p>
-        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20un%20llavero%20acrílico" target="_blank">Comprar</a>
-      </div>
-      <div class="producto">
-        <img src="img/llavero-personalizado.jpg" alt="Llavero personalizado" />
-        <h3>Llavero personalizado</h3>
-        <p>$3.000 CLP</p>
         <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20un%20llavero%20personalizado" target="_blank">Comprar</a>
       </div>
+
+      <!-- Espejos de bolsillo -->
       <div class="producto">
-        <img src="img/espejo.jpg" alt="Espejo de bolsillo" />
-        <h3>Espejo de bolsillo</h3>
+        <div class="imagenes">
+          <a href="img/espejo1.jpg" data-lightbox="espejo" data-title="Espejo 1"><img src="img/espejo1.jpg" alt="Espejo 1" /></a>
+          <a href="img/espejo2.jpg" data-lightbox="espejo" data-title="Espejo 2"><img src="img/espejo2.jpg" alt="Espejo 2" /></a>
+        </div>
+        <h3>Espejos de bolsillo</h3>
         <p>$2.500 CLP</p>
         <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20un%20espejo%20de%20bolsillo" target="_blank">Comprar</a>
       </div>
+
     </div>
 
     <!-- ROPA -->
     <h3>Ropa estampada</h3>
     <div class="productos">
+
+      <!-- Calcetas cortas -->
       <div class="producto">
-        <img src="img/calcetaslargas1.jpg" alt="Calcetas largas" />
-        <h3>Calcetas largas</h3>
+        <div class="imagenes">
+          <a href="img/calcetas1.jpg" data-lightbox="calcetas_cortas" data-title="Calcetas cortas 1"><img src="img/calcetas1.jpg" alt="Calcetas cortas 1" /></a>
+          <a href="img/calcetas2.jpg" data-lightbox="calcetas_cortas" data-title="Calcetas cortas 2"><img src="img/calcetas2.jpg" alt="Calcetas cortas 2" /></a>
+          <a href="img/calcetas3.jpg" data-lightbox="calcetas_cortas" data-title="Calcetas cortas 3"><img src="img/calcetas3.jpg" alt="Calcetas cortas 3" /></a>
+          <a href="img/calcetas4.jpg" data-lightbox="calcetas_cortas" data-title="Calcetas cortas 4"><img src="img/calcetas4.jpg" alt="Calcetas cortas 4" /></a>
+          <a href="img/calcetas5.jpg" data-lightbox="calcetas_cortas" data-title="Calcetas cortas 5"><img src="img/calcetas5.jpg" alt="Calcetas cortas 5" /></a>
+        </div>
+        <h3>Calcetas cortas</h3>
         <p>$7.000 CLP</p>
-        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20unas%20calcetas%20largas%20personalizadas" target="_blank">Comprar</a>
+        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20unas%20calcetas%20cortas" target="_blank">Comprar</a>
       </div>
+
+      <!-- Bandanas -->
       <div class="producto">
-        <img src="img/bandana.jpg" alt="Bandana personalizada" />
-        <h3>Bandana personalizada</h3>
+        <div class="imagenes">
+          <a href="img/bandana1.jpg" data-lightbox="bandanas" data-title="Bandana 1"><img src="img/bandana1.jpg" alt="Bandana 1" /></a>
+          <a href="img/bandana2.jpg" data-lightbox="bandanas" data-title="Bandana 2"><img src="img/bandana2.jpg" alt="Bandana 2" /></a>
+        </div>
+        <h3>Bandanas</h3>
         <p>$3.500 CLP</p>
-        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20una%20bandana%20personalizada" target="_blank">Comprar</a>
+        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20una%20bandana" target="_blank">Comprar</a>
       </div>
+
     </div>
 
     <!-- DECORACIÓN -->
     <h3>Decoración</h3>
     <div class="productos">
+
+      <!-- Cuadros de fotos -->
       <div class="producto">
-        <img src="img/cuadroled.jpg" alt="Cuadro LED" />
-        <h3>Cuadro LED personalizado</h3>
+        <div class="imagenes">
+          <a href="img/cuadro1.jpg" data-lightbox="cuadros" data-title="Cuadro 1"><img src="img/cuadro1.jpg" alt="Cuadro 1" /></a>
+          <a href="img/cuadro2.jpg" data-lightbox="cuadros" data-title="Cuadro 2"><img src="img/cuadro2.jpg" alt="Cuadro 2" /></a>
+          <a href="img/cuadro3.jpg" data-lightbox="cuadros" data-title="Cuadro 3"><img src="img/cuadro3.jpg" alt="Cuadro 3" /></a>
+          <a href="img/cuadro4.jpg" data-lightbox="cuadros" data-title="Cuadro 4"><img src="img/cuadro4.jpg" alt="Cuadro 4" /></a>
+          <a href="img/cuadro5.jpg" data-lightbox="cuadros" data-title="Cuadro 5"><img src="img/cuadro5.jpg" alt="Cuadro 5" /></a>
+          <a href="img/cuadro6.jpg" data-lightbox="cuadros" data-title="Cuadro 6"><img src="img/cuadro6.jpg" alt="Cuadro 6" /></a>
+          <a href="img/cuadro7.jpg" data-lightbox="cuadros" data-title="Cuadro 7"><img src="img/cuadro7.jpg" alt="Cuadro 7" /></a>
+          <a href="img/cuadro8.jpg" data-lightbox="cuadros" data-title="Cuadro 8"><img src="img/cuadro8.jpg" alt="Cuadro 8" /></a>
+          <a href="img/cuadro9.jpg" data-lightbox="cuadros" data-title="Cuadro 9"><img src="img/cuadro9.jpg" alt="Cuadro 9" /></a>
+          <a href="img/cuadro10.jpg" data-lightbox="cuadros" data-title="Cuadro 10"><img src="img/cuadro10.jpg" alt="Cuadro 10" /></a>
+        </div>
+        <h3>Cuadros de fotos</h3>
         <p>$12.990 CLP</p>
-        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20un%20cuadro%20LED%20personalizado" target="_blank">Comprar</a>
+        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20un%20cuadro%20personalizado" target="_blank">Comprar</a>
       </div>
+
+      <!-- Roca fotográfica -->
       <div class="producto">
-        <img src="img/roca.jpg" alt="Roca fotográfica" />
+        <div class="imagenes">
+          <a href="img/roca1.jpg" data-lightbox="roca" data-title="Roca fotográfica 1"><img src="img/roca1.jpg" alt="Roca fotográfica 1" /></a>
+          <a href="img/roca2.jpg" data-lightbox="roca" data-title="Roca fotográfica 2"><img src="img/roca2.jpg" alt="Roca fotográfica 2" /></a>
+        </div>
         <h3>Roca fotográfica</h3>
         <p>$10.000 CLP</p>
         <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20una%20roca%20fotográfica" target="_blank">Comprar</a>
       </div>
+
+      <!-- Rompecabezas -->
       <div class="producto">
-        <img src="img/rompecabezas.jpg" alt="Rompecabezas personalizado" />
+        <div class="imagenes">
+          <a href="img/rompecabezas1.jpg" data-lightbox="rompecabezas" data-title="Rompecabezas 1"><img src="img/rompecabezas1.jpg" alt="Rompecabezas 1" /></a>
+          <a href="img/rompecabezas2.jpg" data-lightbox="rompecabezas" data-title="Rompecabezas 2"><img src="img/rompecabezas2.jpg" alt="Rompecabezas 2" /></a>
+        </div>
         <h3>Rompecabezas personalizado</h3>
         <p>$5.000 CLP</p>
         <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20un%20rompecabezas%20personalizado" target="_blank">Comprar</a>
       </div>
+
     </div>
   </section>
 
@@ -137,5 +264,7 @@
     <p>&copy; 2025 Samy Estampados - Todos los derechos reservados</p>
   </footer>
 
+  <!-- Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
 </body>
 </html>
