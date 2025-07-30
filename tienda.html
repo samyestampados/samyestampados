@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tienda - Samy Estampados</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Script de PayPal -->
+  <script 
+    src="https://www.paypal.com/sdk/js?client-id=BAA8F9DobY8EwYqKGEC81T7guLmWVogbHWsDdZYHhzatxqcJ-hLCew7rI9vCoBL6CN0DurpjhGThDuTtjk&components=hosted-buttons&disable-funding=venmo&currency=USD">
+  </script>
 </head>
 <body>
 
@@ -41,28 +46,63 @@
       </div>
 
       <div class="producto">
-  <img src="img/calcetaslargas1.jpg" alt="Calcetas largas estampadas">
-  <h3>Calcetas largas estampadas</h3>
-  <p>$7.000 CLP</p>
+        <img src="img/calcetaslargas1.jpg" alt="Calcetas largas estampadas">
+        <h3>Calcetas largas estampadas</h3>
+        <p>$7.000 CLP</p>
 
-  <!-- Botón PayPal -->
-  <div id="paypal-container-XY5M9LZ9DLXC6"></div>
-  <script>
-    paypal.HostedButtons({
-      hostedButtonId: "XY5M9LZ9DLXC6",
-    }).render("#paypal-container-XY5M9LZ9DLXC6");
-  </script>
+        <!-- Botón PayPal -->
+        <div id="paypal-container-XY5M9LZ9DLXC6"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "XY5M9LZ9DLXC6",
+          }).render("#paypal-container-XY5M9LZ9DLXC6");
+        </script>
 
-  <!-- Botón WhatsApp -->
-  <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20comprar%20las%20calcetas%20largas%20estampadas" target="_blank">Comprar por WhatsApp</a>
-</div>
+        <!-- Botón WhatsApp -->
+        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20comprar%20las%20calcetas%20largas%20estampadas" target="_blank">Comprar por WhatsApp</a>
+      </div>
 
-<div class="producto">
-  <img src="img/cuadroled.jpg" alt="Cuadro LED personalizado">
-  <h3>Cuadro LED personalizado</h3>
-  <p>$12.990 CLP</p>
-  <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20comprar%20un%20cuadro%20LED%20personalizado" target="_blank">Comprar</a>
-</div>
+      <div class="producto">
+        <img src="img/cuadroled.jpg" alt="Cuadro LED personalizado">
+        <h3>Cuadro LED personalizado</h3>
+        <p>$12.990 CLP</p>
+        <a class="btn" href="https://wa.me/56971714677?text=Hola%20Samy!%20Quiero%20comprar%20un%20cuadro%20LED%20personalizado" target="_blank">Comprar</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POLÍTICAS Y PREGUNTAS FRECUENTES -->
+  <section class="faq-politicas">
+    <h2>Preguntas frecuentes y políticas</h2>
+    <div class="faq-item">
+      <h3>¿Cómo realizo un pedido?</h3>
+      <p>Puedes realizar tu pedido directamente por WhatsApp o pagando con PayPal si el producto tiene habilitada esa opción.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Cuánto demora la entrega?</h3>
+      <p>Los productos personalizados tienen un tiempo de elaboración de 3 a 5 días hábiles. El envío se realiza por courier o retiro en taller según disponibilidad.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Se aceptan devoluciones?</h3>
+      <p>No se aceptan devoluciones por productos personalizados, excepto en caso de error de fabricación. Revisa bien tu diseño antes de confirmar.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>¿Puedo hacer pedidos especiales?</h3>
+      <p>¡Sí! Escríbeme por WhatsApp y cuéntame tu idea, estaré feliz de ayudarte a crear algo único.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Samy Estampados - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
 
 
 
