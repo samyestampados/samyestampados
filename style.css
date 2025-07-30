@@ -40,6 +40,10 @@ nav ul li a {
   font-weight: bold;
 }
 
+nav ul li a.active {
+  color: #c65fa0;
+}
+
 /* HERO */
 .hero {
   background-color: #C8E6C9; /* Verde menta */
@@ -113,36 +117,75 @@ section {
 form {
   max-width: 500px;
   margin: 0 auto;
+  text-align: left;
 }
 
 form input,
 form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 form button {
   background-color: #C8E6C9;
   color: #333;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.3s;
 }
 
 form button:hover {
   background-color: #aedfaa;
 }
 
+/* Mensajes de error y éxito */
+.error {
+  color: #b33f84;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: none;
+  text-align: center;
+}
+
 /* REDES SOCIALES */
+.redes {
+  margin-top: 30px;
+  text-align: center;
+}
+
 .redes a {
   display: inline-block;
-  margin: 10px;
+  margin: 10px 15px;
   text-decoration: none;
   color: #555;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.redes a:hover {
+  color: #c65fa0;
 }
 
 /* BOTÓN WHATSAPP */
@@ -165,95 +208,4 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
-}
-
-.galeria-rescate {
-  padding: 40px 20px;
-  background-color: #fff8f0;
-  text-align: center;
-}
-
-.galeria-rescate h2 {
-  margin-bottom: 20px;
-  color: #555;
-}
-
-.galeria-imagenes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.galeria-imagenes img {
-  width: 180px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.galeria-imagenes img:hover {
-  transform: scale(1.05);
-}
-
-/* PREGUNTAS FRECUENTES Y POLÍTICAS (ACORDEÓN) */
-.faq-politicas {
-  background-color: #fdf5f9;
-  padding: 40px 20px;
-  border-top: 2px solid #e3c0d3;
-  margin-top: 50px;
-}
-
-.faq-politicas h2 {
-  text-align: center;
-  color: #c65fa0;
-  margin-bottom: 30px;
-  font-size: 2em;
-}
-
-.faq-item {
-  max-width: 800px;
-  margin: 0 auto 25px auto;
-  background: #fff;
-  padding: 20px;
-  border-left: 5px solid #c65fa0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border-radius: 10px;
-}
-
-/* Botones preguntas */
-.faq-question {
-  width: 100%;
-  background: #F8C8DC;
-  border: none;
-  padding: 15px 20px;
-  text-align: left;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  transition: background 0.3s ease;
-  border-radius: 10px;
-}
-
-.faq-question:hover,
-.faq-question.active {
-  background: #F1AFC6;
-}
-
-/* Respuestas ocultas */
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background: #fff;
-  padding: 0 20px;
-  border-radius: 0 0 10px 10px;
-}
-
-.faq-answer p {
-  margin: 15px 0;
-  color: #444;
-  line-height: 1.6;
 }

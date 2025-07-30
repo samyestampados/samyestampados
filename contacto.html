@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto - Samy Estampados</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -16,30 +16,32 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="tienda.html">Tienda</a></li>
         <li><a href="quienes-somos.html">Quiénes somos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- FORMULARIO DE CONTACTO -->
+  <!-- FORMULARIO DE CONTACTO MEJORADO -->
   <section class="contacto">
     <h2>Contáctanos</h2>
-    <p>¿Tienes alguna duda, consulta o pedido especial? ¡Escríbenos!</p>
-    
-    <form action="#" method="POST">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="email" placeholder="Tu correo electrónico" required>
-      <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+    <form id="contactForm" action="enviar.php" method="POST" novalidate>
+      <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required />
+      <small class="error" id="nombreError"></small>
+
+      <input type="email" name="email" id="email" placeholder="Tu correo" required />
+      <small class="error" id="emailError"></small>
+
+      <textarea name="mensaje" id="mensaje" placeholder="Tu mensaje..." required></textarea>
+      <small class="error" id="mensajeError"></small>
+
       <button type="submit">Enviar</button>
     </form>
+    <div class="form-message" id="formMessage"></div>
 
     <div class="redes">
-  <p>Síguenos o escríbenos directamente:</p>
-  <a href="mailto:samy.estampados@gmail.com">📧 samy.estampados@gmail.com</a><br>
-  <a href="https://www.instagram.com/samy.estampados" target="_blank">📷 Instagram</a><br>
-  <a href="https://wa.me/56971714677" target="_blank">💬 WhatsApp</a>
-</div>
-
+      <a href="https://www.instagram.com/samy.estampados" target="_blank">Instagram</a>
+      <a href="https://wa.me/56971714677">WhatsApp</a>
+    </div>
   </section>
 
   <!-- BOTÓN WHATSAPP -->
@@ -50,5 +52,62 @@
     <p>&copy; 2025 Samy Estampados - Todos los derechos reservados</p>
   </footer>
 
+  <!-- SCRIPT PARA VALIDAR FORMULARIO -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const nombre = document.getElementById('nombre');
+    const email = document.getElementById('email');
+    const mensaje = document.getElementById('mensaje');
+
+    const nombreError = document.getElementById('nombreError');
+    const emailError = document.getElementById('emailError');
+    const mensajeError = document.getElementById('mensajeError');
+    const formMessage = document.getElementById('formMessage');
+
+    function validarEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Reset errores y mensaje
+      nombreError.style.display = 'none';
+      emailError.style.display = 'none';
+      mensajeError.style.display = 'none';
+      formMessage.style.display = 'none';
+
+      let valid = true;
+
+      if (nombre.value.trim() === '') {
+        nombreError.textContent = 'Por favor, ingresa tu nombre.';
+        nombreError.style.display = 'block';
+        valid = false;
+      }
+
+      if (email.value.trim() === '') {
+        emailError.textContent = 'Por favor, ingresa tu correo.';
+        emailError.style.display = 'block';
+        valid = false;
+      } else if (!validarEmail(email.value.trim())) {
+        emailError.textContent = 'Por favor, ingresa un correo válido.';
+        emailError.style.display = 'block';
+        valid = false;
+      }
+
+      if (mensaje.value.trim() === '') {
+        mensajeError.textContent = 'Por favor, ingresa tu mensaje.';
+        mensajeError.style.display = 'block';
+        valid = false;
+      }
+
+      if (valid) {
+        formMessage.textContent = '¡Gracias por contactarnos! Te responderemos pronto.';
+        formMessage.style.color = '#25D366';
+        formMessage.style.display = 'block';
+        form.reset();
+      }
+    });
+  </script>
 </body>
 </html>
