@@ -197,3 +197,40 @@ footer {
   transform: scale(1.05);
 }
 
+/* PREGUNTAS FRECUENTES Y POLÍTICAS */
+.faq-politicas {
+  background-color: #fdf5f9;
+  padding: 40px 20px;
+  border-top: 2px solid #e3c0d3;
+  margin-top: 50px;
+}
+
+.faq-politicas h2 {
+  text-align: center;
+  color: #c65fa0;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.faq-item {
+  max-width: 800px;
+  margin: 0 auto 25px auto;
+  background: #fff;
+  padding: 20px;
+  border-left: 5px solid #c65fa0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.faq-item h3 {
+  margin-top: 0;
+  color: #b33f84;
+  font-size: 1.2em;
+}
+
+.faq-item p {
+  margin: 10px 0 0;
+  color: #444;
+  line-height: 1.6;
+}
+
