@@ -197,7 +197,7 @@ footer {
   transform: scale(1.05);
 }
 
-/* PREGUNTAS FRECUENTES Y POLÍTICAS */
+/* PREGUNTAS FRECUENTES Y POLÍTICAS (ACORDEÓN) */
 .faq-politicas {
   background-color: #fdf5f9;
   padding: 40px 20px;
@@ -222,15 +222,38 @@ footer {
   border-radius: 10px;
 }
 
-.faq-item h3 {
-  margin-top: 0;
-  color: #b33f84;
-  font-size: 1.2em;
+/* Botones preguntas */
+.faq-question {
+  width: 100%;
+  background: #F8C8DC;
+  border: none;
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.3s ease;
+  border-radius: 10px;
 }
 
-.faq-item p {
-  margin: 10px 0 0;
+.faq-question:hover,
+.faq-question.active {
+  background: #F1AFC6;
+}
+
+/* Respuestas ocultas */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fff;
+  padding: 0 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.faq-answer p {
+  margin: 15px 0;
   color: #444;
   line-height: 1.6;
 }
-
