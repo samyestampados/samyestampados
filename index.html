@@ -43,7 +43,6 @@
   <section class="galeria">
     <h2>Productos destacados</h2>
     <div class="productos">
-      <!-- Aquí irán productos con imagen, nombre y botón -->
       <div class="producto">
         <img src="img/taza1.jpg" alt="Taza personalizada" />
         <h3>Taza personalizada</h3>
@@ -84,28 +83,38 @@
     <h2>Preguntas Frecuentes &amp; Políticas</h2>
 
     <div class="faq-item">
-      <h3>¿Cuáles son las formas de pago?</h3>
-      <p>Aceptamos pagos con PayPal, transferencia bancaria y también puedes comprar directamente por WhatsApp.</p>
+      <button class="faq-question">¿Cuáles son las formas de pago?</button>
+      <div class="faq-answer">
+        <p>Aceptamos pagos con PayPal, transferencia bancaria y también puedes comprar directamente por WhatsApp.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h3>¿Cuánto se demora el envío?</h3>
-      <p>Los pedidos se despachan dentro de 2 a 5 días hábiles. Te enviaremos un número de seguimiento una vez que el pedido esté en camino.</p>
+      <button class="faq-question">¿Cuánto se demora el envío?</button>
+      <div class="faq-answer">
+        <p>Los pedidos se despachan dentro de 2 a 5 días hábiles. Te enviaremos un número de seguimiento una vez que el pedido esté en camino.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h3>¿Puedo cambiar o devolver un producto?</h3>
-      <p>Sí, tienes 10 días para cambios desde la recepción del producto, siempre que esté en perfecto estado. No realizamos devoluciones de dinero, pero puedes cambiar por otro producto.</p>
+      <button class="faq-question">¿Puedo cambiar o devolver un producto?</button>
+      <div class="faq-answer">
+        <p>Sí, tienes 10 días para cambios desde la recepción del producto, siempre que esté en perfecto estado. No realizamos devoluciones de dinero, pero puedes cambiar por otro producto.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h3>¿Realizan envíos a todo Chile?</h3>
-      <p>¡Sí! Hacemos envíos a todo el país a través de empresas de transporte confiables. También puedes coordinar retiro en taller si estás en Santiago.</p>
+      <button class="faq-question">¿Realizan envíos a todo Chile?</button>
+      <div class="faq-answer">
+        <p>¡Sí! Hacemos envíos a todo el país a través de empresas de transporte confiables. También puedes coordinar retiro en taller si estás en Santiago.</p>
+      </div>
     </div>
 
     <div class="faq-item">
-      <h3>¿Los productos son personalizados?</h3>
-      <p>Sí, puedes personalizar tus pedidos con el diseño que quieras. Escríbenos por WhatsApp o Instagram para coordinar tu diseño personalizado.</p>
+      <button class="faq-question">¿Los productos son personalizados?</button>
+      <div class="faq-answer">
+        <p>Sí, puedes personalizar tus pedidos con el diseño que quieras. Escríbenos por WhatsApp o Instagram para coordinar tu diseño personalizado.</p>
+      </div>
     </div>
   </section>
 
@@ -116,6 +125,32 @@
   <footer>
     <p>&copy; 2025 Samy Estampados - Todos los derechos reservados</p>
   </footer>
+
+  <!-- SCRIPT PARA FAQ ACORDEÓN -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          question.classList.toggle('active');
+
+          const answer = question.nextElementSibling;
+
+          if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+          } else {
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+              ans.style.maxHeight = null;
+            });
+            document.querySelectorAll('.faq-question').forEach(btn => {
+              if (btn !== question) btn.classList.remove('active');
+            });
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-
