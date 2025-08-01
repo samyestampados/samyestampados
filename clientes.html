@@ -1,83 +1,583 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clientes Felices</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clientes Felices | Samy Estampados</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
+      background: #f9f7f6;
+      margin: 0; padding: 0;
     }
-    header {
-      background-color: #6b5b95;
-      color: white;
-      padding: 1em;
+    h1 {
       text-align: center;
+      padding: 1rem 0;
+      color: #4b3b5e;
     }
-    .galeria-clientes {
+    .gallery-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 1rem 2rem 1rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
     }
-    .galeria-clientes img {
+    .gallery-item {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgb(0 0 0 / 0.2);
+    }
+    .gallery-item img {
       width: 100%;
       height: auto;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
+      display: block;
+      object-fit: cover;
     }
-    .galeria-clientes img:hover {
-      transform: scale(1.05);
-    }
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
+    .caption {
+      padding: 0.5rem;
+      font-size: 0.9rem;
+      color: #6a6a6a;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Clientes Felices</h1>
-    <p>Conoce algunos de nuestros trabajos personalizados</p>
-  </header>
+  <h1>Clientes Felices - Samy Estampados</h1>
+  <section class="gallery-container">
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 001">
+      <img src="img/clientes/cliente_001.jpg" alt="Trabajo estampado cliente 001" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 001</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 002">
+      <img src="img/clientes/cliente_002.jpg" alt="Trabajo estampado cliente 002" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 002</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 003">
+      <img src="img/clientes/cliente_003.jpg" alt="Trabajo estampado cliente 003" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 003</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 004">
+      <img src="img/clientes/cliente_004.jpg" alt="Trabajo estampado cliente 004" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 004</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 005">
+      <img src="img/clientes/cliente_005.jpg" alt="Trabajo estampado cliente 005" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 005</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 006">
+      <img src="img/clientes/cliente_006.jpg" alt="Trabajo estampado cliente 006" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 006</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 007">
+      <img src="img/clientes/cliente_007.jpg" alt="Trabajo estampado cliente 007" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 007</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 008">
+      <img src="img/clientes/cliente_008.jpg" alt="Trabajo estampado cliente 008" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 008</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 009">
+      <img src="img/clientes/cliente_009.jpg" alt="Trabajo estampado cliente 009" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 009</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 010">
+      <img src="img/clientes/cliente_010.jpg" alt="Trabajo estampado cliente 010" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 010</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 011">
+      <img src="img/clientes/cliente_011.jpg" alt="Trabajo estampado cliente 011" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 011</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 012">
+      <img src="img/clientes/cliente_012.jpg" alt="Trabajo estampado cliente 012" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 012</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 013">
+      <img src="img/clientes/cliente_013.jpg" alt="Trabajo estampado cliente 013" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 013</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 014">
+      <img src="img/clientes/cliente_014.jpg" alt="Trabajo estampado cliente 014" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 014</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 015">
+      <img src="img/clientes/cliente_015.jpg" alt="Trabajo estampado cliente 015" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 015</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 016">
+      <img src="img/clientes/cliente_016.jpg" alt="Trabajo estampado cliente 016" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 016</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 017">
+      <img src="img/clientes/cliente_017.jpg" alt="Trabajo estampado cliente 017" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 017</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 018">
+      <img src="img/clientes/cliente_018.jpg" alt="Trabajo estampado cliente 018" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 018</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 019">
+      <img src="img/clientes/cliente_019.jpg" alt="Trabajo estampado cliente 019" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 019</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 020">
+      <img src="img/clientes/cliente_020.jpg" alt="Trabajo estampado cliente 020" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 020</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 021">
+      <img src="img/clientes/cliente_021.jpg" alt="Trabajo estampado cliente 021" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 021</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 022">
+      <img src="img/clientes/cliente_022.jpg" alt="Trabajo estampado cliente 022" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 022</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 023">
+      <img src="img/clientes/cliente_023.jpg" alt="Trabajo estampado cliente 023" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 023</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 024">
+      <img src="img/clientes/cliente_024.jpg" alt="Trabajo estampado cliente 024" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 024</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 025">
+      <img src="img/clientes/cliente_025.jpg" alt="Trabajo estampado cliente 025" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 025</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 026">
+      <img src="img/clientes/cliente_026.jpg" alt="Trabajo estampado cliente 026" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 026</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 027">
+      <img src="img/clientes/cliente_027.jpg" alt="Trabajo estampado cliente 027" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 027</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 028">
+      <img src="img/clientes/cliente_028.jpg" alt="Trabajo estampado cliente 028" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 028</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 029">
+      <img src="img/clientes/cliente_029.jpg" alt="Trabajo estampado cliente 029" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 029</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 030">
+      <img src="img/clientes/cliente_030.jpg" alt="Trabajo estampado cliente 030" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 030</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 031">
+      <img src="img/clientes/cliente_031.jpg" alt="Trabajo estampado cliente 031" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 031</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 032">
+      <img src="img/clientes/cliente_032.jpg" alt="Trabajo estampado cliente 032" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 032</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 033">
+      <img src="img/clientes/cliente_033.jpg" alt="Trabajo estampado cliente 033" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 033</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 034">
+      <img src="img/clientes/cliente_034.jpg" alt="Trabajo estampado cliente 034" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 034</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 035">
+      <img src="img/clientes/cliente_035.jpg" alt="Trabajo estampado cliente 035" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 035</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 036">
+      <img src="img/clientes/cliente_036.jpg" alt="Trabajo estampado cliente 036" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 036</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 037">
+      <img src="img/clientes/cliente_037.jpg" alt="Trabajo estampado cliente 037" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 037</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 038">
+      <img src="img/clientes/cliente_038.jpg" alt="Trabajo estampado cliente 038" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 038</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 039">
+      <img src="img/clientes/cliente_039.jpg" alt="Trabajo estampado cliente 039" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 039</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 040">
+      <img src="img/clientes/cliente_040.jpg" alt="Trabajo estampado cliente 040" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 040</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 041">
+      <img src="img/clientes/cliente_041.jpg" alt="Trabajo estampado cliente 041" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 041</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 042">
+      <img src="img/clientes/cliente_042.jpg" alt="Trabajo estampado cliente 042" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 042</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 043">
+      <img src="img/clientes/cliente_043.jpg" alt="Trabajo estampado cliente 043" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 043</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 044">
+      <img src="img/clientes/cliente_044.jpg" alt="Trabajo estampado cliente 044" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 044</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 045">
+      <img src="img/clientes/cliente_045.jpg" alt="Trabajo estampado cliente 045" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 045</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 046">
+      <img src="img/clientes/cliente_046.jpg" alt="Trabajo estampado cliente 046" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 046</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 047">
+      <img src="img/clientes/cliente_047.jpg" alt="Trabajo estampado cliente 047" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 047</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 048">
+      <img src="img/clientes/cliente_048.jpg" alt="Trabajo estampado cliente 048" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 048</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 049">
+      <img src="img/clientes/cliente_049.jpg" alt="Trabajo estampado cliente 049" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 049</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 050">
+      <img src="img/clientes/cliente_050.jpg" alt="Trabajo estampado cliente 050" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 050</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 051">
+      <img src="img/clientes/cliente_051.jpg" alt="Trabajo estampado cliente 051" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 051</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 052">
+      <img src="img/clientes/cliente_052.jpg" alt="Trabajo estampado cliente 052" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 052</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 053">
+      <img src="img/clientes/cliente_053.jpg" alt="Trabajo estampado cliente 053" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 053</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 054">
+      <img src="img/clientes/cliente_054.jpg" alt="Trabajo estampado cliente 054" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 054</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 055">
+      <img src="img/clientes/cliente_055.jpg" alt="Trabajo estampado cliente 055" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 055</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 056">
+      <img src="img/clientes/cliente_056.jpg" alt="Trabajo estampado cliente 056" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 056</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 057">
+      <img src="img/clientes/cliente_057.jpg" alt="Trabajo estampado cliente 057" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 057</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 058">
+      <img src="img/clientes/cliente_058.jpg" alt="Trabajo estampado cliente 058" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 058</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 059">
+      <img src="img/clientes/cliente_059.jpg" alt="Trabajo estampado cliente 059" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 059</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 060">
+      <img src="img/clientes/cliente_060.jpg" alt="Trabajo estampado cliente 060" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 060</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 061">
+      <img src="img/clientes/cliente_061.jpg" alt="Trabajo estampado cliente 061" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 061</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 062">
+      <img src="img/clientes/cliente_062.jpg" alt="Trabajo estampado cliente 062" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 062</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 063">
+      <img src="img/clientes/cliente_063.jpg" alt="Trabajo estampado cliente 063" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 063</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 064">
+      <img src="img/clientes/cliente_064.jpg" alt="Trabajo estampado cliente 064" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 064</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 065">
+      <img src="img/clientes/cliente_065.jpg" alt="Trabajo estampado cliente 065" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 065</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 066">
+      <img src="img/clientes/cliente_066.jpg" alt="Trabajo estampado cliente 066" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 066</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 067">
+      <img src="img/clientes/cliente_067.jpg" alt="Trabajo estampado cliente 067" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 067</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 068">
+      <img src="img/clientes/cliente_068.jpg" alt="Trabajo estampado cliente 068" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 068</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 069">
+      <img src="img/clientes/cliente_069.jpg" alt="Trabajo estampado cliente 069" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 069</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 070">
+      <img src="img/clientes/cliente_070.jpg" alt="Trabajo estampado cliente 070" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 070</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 071">
+      <img src="img/clientes/cliente_071.jpg" alt="Trabajo estampado cliente 071" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 071</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 072">
+      <img src="img/clientes/cliente_072.jpg" alt="Trabajo estampado cliente 072" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 072</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 073">
+      <img src="img/clientes/cliente_073.jpg" alt="Trabajo estampado cliente 073" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 073</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 074">
+      <img src="img/clientes/cliente_074.jpg" alt="Trabajo estampado cliente 074" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 074</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 075">
+      <img src="img/clientes/cliente_075.jpg" alt="Trabajo estampado cliente 075" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 075</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 076">
+      <img src="img/clientes/cliente_076.jpg" alt="Trabajo estampado cliente 076" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 076</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 077">
+      <img src="img/clientes/cliente_077.jpg" alt="Trabajo estampado cliente 077" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 077</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 078">
+      <img src="img/clientes/cliente_078.jpg" alt="Trabajo estampado cliente 078" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 078</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 079">
+      <img src="img/clientes/cliente_079.jpg" alt="Trabajo estampado cliente 079" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 079</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 080">
+      <img src="img/clientes/cliente_080.jpg" alt="Trabajo estampado cliente 080" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 080</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 081">
+      <img src="img/clientes/cliente_081.jpg" alt="Trabajo estampado cliente 081" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 081</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 082">
+      <img src="img/clientes/cliente_082.jpg" alt="Trabajo estampado cliente 082" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 082</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 083">
+      <img src="img/clientes/cliente_083.jpg" alt="Trabajo estampado cliente 083" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 083</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 084">
+      <img src="img/clientes/cliente_084.jpg" alt="Trabajo estampado cliente 084" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 084</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 085">
+      <img src="img/clientes/cliente_085.jpg" alt="Trabajo estampado cliente 085" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 085</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 086">
+      <img src="img/clientes/cliente_086.jpg" alt="Trabajo estampado cliente 086" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 086</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 087">
+      <img src="img/clientes/cliente_087.jpg" alt="Trabajo estampado cliente 087" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 087</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 088">
+      <img src="img/clientes/cliente_088.jpg" alt="Trabajo estampado cliente 088" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 088</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 089">
+      <img src="img/clientes/cliente_089.jpg" alt="Trabajo estampado cliente 089" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 089</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 090">
+      <img src="img/clientes/cliente_090.jpg" alt="Trabajo estampado cliente 090" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 090</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 091">
+      <img src="img/clientes/cliente_091.jpg" alt="Trabajo estampado cliente 091" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 091</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 092">
+      <img src="img/clientes/cliente_092.jpg" alt="Trabajo estampado cliente 092" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 092</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 093">
+      <img src="img/clientes/cliente_093.jpg" alt="Trabajo estampado cliente 093" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 093</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 094">
+      <img src="img/clientes/cliente_094.jpg" alt="Trabajo estampado cliente 094" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 094</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 095">
+      <img src="img/clientes/cliente_095.jpg" alt="Trabajo estampado cliente 095" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 095</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 096">
+      <img src="img/clientes/cliente_096.jpg" alt="Trabajo estampado cliente 096" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 096</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 097">
+      <img src="img/clientes/cliente_097.jpg" alt="Trabajo estampado cliente 097" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 097</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 098">
+      <img src="img/clientes/cliente_098.jpg" alt="Trabajo estampado cliente 098" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 098</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 099">
+      <img src="img/clientes/cliente_099.jpg" alt="Trabajo estampado cliente 099" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 099</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 100">
+      <img src="img/clientes/cliente_100.jpg" alt="Trabajo estampado cliente 100" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 100</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 101">
+      <img src="img/clientes/cliente_101.jpg" alt="Trabajo estampado cliente 101" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 101</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 102">
+      <img src="img/clientes/cliente_102.jpg" alt="Trabajo estampado cliente 102" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 102</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 103">
+      <img src="img/clientes/cliente_103.jpg" alt="Trabajo estampado cliente 103" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 103</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 104">
+      <img src="img/clientes/cliente_104.jpg" alt="Trabajo estampado cliente 104" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 104</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 105">
+      <img src="img/clientes/cliente_105.jpg" alt="Trabajo estampado cliente 105" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 105</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 106">
+      <img src="img/clientes/cliente_106.jpg" alt="Trabajo estampado cliente 106" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 106</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 107">
+      <img src="img/clientes/cliente_107.jpg" alt="Trabajo estampado cliente 107" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 107</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 108">
+      <img src="img/clientes/cliente_108.jpg" alt="Trabajo estampado cliente 108" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 108</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 109">
+      <img src="img/clientes/cliente_109.jpg" alt="Trabajo estampado cliente 109" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 109</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 110">
+      <img src="img/clientes/cliente_110.jpg" alt="Trabajo estampado cliente 110" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 110</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 111">
+      <img src="img/clientes/cliente_111.jpg" alt="Trabajo estampado cliente 111" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 111</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 112">
+      <img src="img/clientes/cliente_112.jpg" alt="Trabajo estampado cliente 112" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 112</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 113">
+      <img src="img/clientes/cliente_113.jpg" alt="Trabajo estampado cliente 113" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 113</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 114">
+      <img src="img/clientes/cliente_114.jpg" alt="Trabajo estampado cliente 114" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 114</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 115">
+      <img src="img/clientes/cliente_115.jpg" alt="Trabajo estampado cliente 115" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 115</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 116">
+      <img src="img/clientes/cliente_116.jpg" alt="Trabajo estampado cliente 116" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 116</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 117">
+      <img src="img/clientes/cliente_117.jpg" alt="Trabajo estampado cliente 117" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 117</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 118">
+      <img src="img/clientes/cliente_118.jpg" alt="Trabajo estampado cliente 118" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 118</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 119">
+      <img src="img/clientes/cliente_119.jpg" alt="Trabajo estampado cliente 119" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 119</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 120">
+      <img src="img/clientes/cliente_120.jpg" alt="Trabajo estampado cliente 120" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 120</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 121">
+      <img src="img/clientes/cliente_121.jpg" alt="Trabajo estampado cliente 121" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 121</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 122">
+      <img src="img/clientes/cliente_122.jpg" alt="Trabajo estampado cliente 122" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 122</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 123">
+      <img src="img/clientes/cliente_123.jpg" alt="Trabajo estampado cliente 123" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 123</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 124">
+      <img src="img/clientes/cliente_124.jpg" alt="Trabajo estampado cliente 124" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 124</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 125">
+      <img src="img/clientes/cliente_125.jpg" alt="Trabajo estampado cliente 125" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 125</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 126">
+      <img src="img/clientes/cliente_126.jpg" alt="Trabajo estampado cliente 126" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 126</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 127">
+      <img src="img/clientes/cliente_127.jpg" alt="Trabajo estampado cliente 127" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 127</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 128">
+      <img src="img/clientes/cliente_128.jpg" alt="Trabajo estampado cliente 128" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 128</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 129">
+      <img src="img/clientes/cliente_129.jpg" alt="Trabajo estampado cliente 129" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 129</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 130">
+      <img src="img/clientes/cliente_130.jpg" alt="Trabajo estampado cliente 130" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 130</div>
+    </article>
+    <article class="gallery-item" tabindex="0" aria-label="Trabajo estampado cliente 131">
+      <img src="img/clientes/cliente_131.jpg" alt="Trabajo estampado cliente 131" loading="lazy" />
+      <div class="caption">Trabajo estampado cliente 131</div>
+    </article>
 
-  <div class="galeria-clientes">
-<!-- Inicio de galería -->
-" + html_complete_images + "
-<!-- Fin de galería -->
-  </div>
-
-  <div class="lightbox" id="lightbox" onclick="cerrarLightbox()">
-    <img id="imagen-ampliada" src="" alt="Imagen ampliada">
-  </div>
-
-  <script>
-    function ampliar(imagen) {
-      const lightbox = document.getElementById('lightbox');
-      const imagenAmpliada = document.getElementById('imagen-ampliada');
-      imagenAmpliada.src = imagen.src;
-      lightbox.style.display = 'flex';
-    }
-
-    function cerrarLightbox() {
-      document.getElementById('lightbox').style.display = 'none';
-    }
-  </script>
+  </section>
 </body>
 </html>
