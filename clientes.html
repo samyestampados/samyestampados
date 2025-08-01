@@ -1,131 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Clientes Felices | Samy Estampados</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes Felices</title>
   <style>
-    .galeria-clientes {
-      padding: 40px 20px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+    header {
+      background-color: #6b5b95;
+      color: white;
+      padding: 1em;
       text-align: center;
     }
-
-    .galeria-clientes h1 {
-      font-size: 2.5rem;
-      color: #c65fa0;
-      margin-bottom: 20px;
-    }
-
-    .grid-clientes {
+    .galeria-clientes {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+      gap: 10px;
+      padding: 20px;
     }
-
-    .grid-clientes img {
+    .galeria-clientes img {
       width: 100%;
+      height: auto;
       border-radius: 10px;
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-
-    .grid-clientes img:hover {
+    .galeria-clientes img:hover {
       transform: scale(1.05);
     }
-
-    .modal {
+    .lightbox {
       display: none;
       position: fixed;
       z-index: 999;
       left: 0;
       top: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
     }
-
-    .modal img {
+    .lightbox img {
       max-width: 90%;
       max-height: 90%;
-      border-radius: 10px;
-    }
-
-    .modal.active {
-      display: flex;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="logo">
-      <img src="img/logo.jpg" alt="Logo Samy Estampados" style="height: 50px;" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="quienes.html">Quiénes Somos</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="clientes.html" class="active">Clientes Felices</a></li>
-      </ul>
-    </nav>
+    <h1>Clientes Felices</h1>
+    <p>Conoce algunos de nuestros trabajos personalizados</p>
   </header>
 
-  <section class="galeria-clientes">
-    <h1>Clientes Felices</h1>
-    <div class="grid-clientes">
-      <!-- Galería de 131 imágenes -->
-      <!-- cliente_001.jpg hasta cliente_131.jpg desde carpeta img/clientes/ -->
-      <!-- Copiado directamente en HTML para compatibilidad máxima -->
-      <!-- Puedes generar con un script, pero aquí está completo -->
-
-      <!-- INICIO DE IMÁGENES -->
-      <!-- Solo pegamos lo más importante aquí como ejemplo -->
-      <!-- Repetimos para las 131 imágenes -->
-      <!-- Puedes seguir el patrón si agregas más -->
-      <!-- 👇 -->
-
-      <!-- Generado automáticamente -->
-      <!-- Te muestro solo los primeros 5 como ejemplo, el resto sigue igual -->
-      <img src="img/clientes/cliente_001.jpg" alt="Cliente feliz 001" onclick="ampliar(this)">
-      <img src="img/clientes/cliente_002.jpg" alt="Cliente feliz 002" onclick="ampliar(this)">
-      <img src="img/clientes/cliente_003.jpg" alt="Cliente feliz 003" onclick="ampliar(this)">
-      <img src="img/clientes/cliente_004.jpg" alt="Cliente feliz 004" onclick="ampliar(this)">
-      <img src="img/clientes/cliente_005.jpg" alt="Cliente feliz 005" onclick="ampliar(this)">
-      <!-- ... continúa hasta cliente_131.jpg -->
-      <!-- Puedes pedirme que los inserte todos si los necesitas literalmente aquí -->
-
-      <!-- FIN DE IMÁGENES -->
-    </div>
-  </section>
-
-  <div class="modal" id="modal">
-    <img id="modal-img" src="" alt="Ampliada">
+  <div class="galeria-clientes">
+<!-- Inicio de galería -->
+" + html_complete_images + "
+<!-- Fin de galería -->
   </div>
 
-  <footer>
-    <p>© 2025 Samy Estampados - Todos los derechos reservados.</p>
-  </footer>
+  <div class="lightbox" id="lightbox" onclick="cerrarLightbox()">
+    <img id="imagen-ampliada" src="" alt="Imagen ampliada">
+  </div>
 
   <script>
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modal-img");
-
     function ampliar(imagen) {
-      modalImg.src = imagen.src;
-      modal.classList.add("active");
+      const lightbox = document.getElementById('lightbox');
+      const imagenAmpliada = document.getElementById('imagen-ampliada');
+      imagenAmpliada.src = imagen.src;
+      lightbox.style.display = 'flex';
     }
 
-    modal.addEventListener("click", () => {
-      modal.classList.remove("active");
-    });
+    function cerrarLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
   </script>
-
 </body>
 </html>
